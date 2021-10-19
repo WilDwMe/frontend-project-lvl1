@@ -14,4 +14,8 @@ jobs:
       - name: List files in the repository
         run: |
           make lint
+<<<<<<< HEAD
       - run: echo "🍏 This job's status is ${{ job.status }}."
+=======
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+>>>>>>> 9ea94107d32d2a8d12ab76360efddaa385bd04ff
