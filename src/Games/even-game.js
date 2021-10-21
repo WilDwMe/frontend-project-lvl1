@@ -18,6 +18,7 @@ let winCount = 0;
 
 const engine = (game) => {
   const gameIn = game();
+  console.log(gameIn.gameRules);
 
   if (winCount < 3) {
     console.log(`Question: ${gameIn.expression}`);
