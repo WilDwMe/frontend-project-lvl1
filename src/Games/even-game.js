@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const brainEven = () => {
+const even = () => {
   console.log('Welcome to Brain Games!');
   const name = readlineSync.question('Hi! what is your name?  ');
 
@@ -9,25 +9,29 @@ const brainEven = () => {
 
   let count = 0;
 
-  const game = () => {
-    if (count < 3) {
-      const num = Math.round(Math.random() * 100);
-      let rigthAnswer;
-
-      if (num % 2 === 0) {
-        rigthAnswer = 'no';
-      } else {
-        rigthAnswer = 'yes';
+  const checkPrime = (num) => {
+    let flag = false;
+    for (let i = 2; i < num; i += 1) {
+      if (num % i === 0) {
+        flag = true;
       }
+    }
+    return flag;
+  };
 
-      console.log(`Question: ${num}`);
+  const engine = () => {
+    if (count < 3) {
+      const exp = Math.round(Math.random() * 100);
+      const rigthAnswer = checkPrime(exp) ? 'no' : 'yes';
+
+      console.log(`Question: ${exp}`);
       const answer = readlineSync.question('Your answer: ');
 
       if (answer === rigthAnswer) {
         console.log('Correct!');
         // eslint-disable-next-line no-plusplus
         count++;
-        game();
+        engine();
       } else {
         console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rigthAnswer}'`);
         console.log(`Let's try again ${name}!`);
@@ -36,7 +40,7 @@ const brainEven = () => {
       console.log(`Congratulations, ${name}!`);
     }
   };
-  game();
+  engine();
 };
 
-export default brainEven;
+export default even;
