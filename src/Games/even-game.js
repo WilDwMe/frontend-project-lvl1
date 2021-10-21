@@ -1,6 +1,10 @@
 import readlineSync from 'readline-sync';
+import isPrime from '../isPrime.js';
 
 const even = () => {
+  const exp = Math.round(Math.random() * 100);
+  const rigthAnswer = isPrime(exp) ? 'no' : 'yes';
+
   console.log('Welcome to Brain Games!');
   const name = readlineSync.question('Hi! what is your name?  ');
 
@@ -9,21 +13,8 @@ const even = () => {
 
   let count = 0;
 
-  const checkPrime = (num) => {
-    let flag = false;
-    for (let i = 2; i < num; i += 1) {
-      if (num % i === 0) {
-        flag = true;
-      }
-    }
-    return flag;
-  };
-
   const engine = () => {
     if (count < 3) {
-      const exp = Math.round(Math.random() * 100);
-      const rigthAnswer = checkPrime(exp) ? 'no' : 'yes';
-
       console.log(`Question: ${exp}`);
       const answer = readlineSync.question('Your answer: ');
 
