@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 const brainEven = () => {
-  console.log('Welcome to Brain Games');
+  console.log('Welcome to Brain Games!');
   const name = readlineSync.question('Hi! what is your name?  ');
 
   console.log(`Hello, ${name}!`);
@@ -30,7 +30,7 @@ const brainEven = () => {
         game();
       } else {
         console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rigthAnswer}'`);
-        console.log(`Let's try again ${name}`);
+        console.log(`Let's try again ${name}!`);
       }
     } else {
       console.log(`Congratulations, ${name}!`);
