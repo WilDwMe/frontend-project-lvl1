@@ -2,9 +2,10 @@ import engine from '../index.js';
 
 const calc = () => {
   const operators = ['-', '+', '*'];
+  const randomOp = operators[Math.round(Math.random() * 2)];
   const a = Math.round(Math.random() * 10);
   const b = Math.round(Math.random() * 10);
-  const exp = a + operators[Math.round(Math.random() * 2)] + b;
+  const exp = a + randomOp + b;
   // eslint-disable-next-line no-eval
   const rigthAnswer = String(eval(exp));
   const rules = 'What is the result of the expression?';
@@ -15,6 +16,6 @@ const calc = () => {
   };
 };
 
-engine(calc);
+engine(calc, 0);
 
 export default calc;
