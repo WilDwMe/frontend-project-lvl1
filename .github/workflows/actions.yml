@@ -22,6 +22,12 @@ jobs:
         # https://github.com/actions/checkout
       - uses: actions/checkout@v2
         # Step's name
+        # Reconfigure git to use HTTP authentication
+      - name: Reconfigure git to use HTTP authentication
+        run: >
+          git config --global url."https://github.com/".insteadOf
+          ssh://git@github.com/
+
       - name: Use Node.js ${{ matrix.node-version }}
         # Configures the node version used on GitHub-hosted runners
         # https://github.com/actions/setup-node
