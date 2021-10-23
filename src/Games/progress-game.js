@@ -4,6 +4,7 @@ const progress = (elem, n) => {
   const arr = [];
   for (let i = 0; i < n; i += 1) {
     arr[i] = elem;
+    // eslint-disable-next-line no-param-reassign
     elem += n;
   }
   return arr;
