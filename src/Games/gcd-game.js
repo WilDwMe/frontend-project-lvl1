@@ -9,9 +9,10 @@ function NOD(x, y) {
 const gcd = () => {
   const a = Math.round(Math.random() * 10);
   const b = Math.round(Math.random() * 10);
-  const exp = NOD(a, b);
+  const exp = `${a} ${b}`;
+  const calcExpr = NOD(a, b);
   // eslint-disable-next-line no-eval
-  const rigthAnswer = String(eval(exp));
+  const rigthAnswer = String(eval(calcExpr));
   const rules = 'Find the greatest common divisor of given numbers.';
   return {
     expression: exp,

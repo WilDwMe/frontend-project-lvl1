@@ -12,7 +12,6 @@ const engine = (game, iter) => {
   }
 
   if (count < 3) {
-    console.log(gameIn.answer);
     console.log(`Question: ${gameIn.expression}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
