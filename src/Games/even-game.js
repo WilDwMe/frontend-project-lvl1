@@ -2,7 +2,7 @@ import engine from '../index.js';
 
 const even = () => {
   const exp = Math.round(Math.random() * 100);
-  const rigthAnswer = exp % 2 === 0 ? 'no' : 'yes';
+  const rigthAnswer = exp % 2 === 0 ? 'yes' : 'no';
   const rules = 'Answer "yes" if the number is even, otherwise answer "no"';
   return {
     expression: exp,
