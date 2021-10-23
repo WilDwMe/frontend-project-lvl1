@@ -7,7 +7,9 @@ const engine = (game, iter) => {
   let count = 0 + iter;
   const gameIn = game();
 
-  // console.log(gameIn.gameRules);
+  if (count === 0) {
+    console.log(gameIn.gameRules);
+  }
 
   if (count < 3) {
     console.log(gameIn.answer);
