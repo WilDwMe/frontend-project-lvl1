@@ -1,10 +1,10 @@
-import isPrime from '../isPrime.js';
 import engine from '../index.js';
+import isPrime from '../isPrime.js';
 
-const even = () => {
+const prime = () => {
   const exp = Math.round(Math.random() * 100);
   const rigthAnswer = isPrime(exp) ? 'no' : 'yes';
-  const rules = 'Answer "yes" if the number is even, otherwise answer "no"';
+  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   return {
     expression: exp,
     answer: rigthAnswer,
@@ -12,6 +12,6 @@ const even = () => {
   };
 };
 
-engine(even, 0);
+engine(prime, 0);
 
-export default even;
+export default prime;
