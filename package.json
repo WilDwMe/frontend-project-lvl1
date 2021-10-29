@@ -13,8 +13,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^25.2.2",
     "jest": "^27.0.1",
-    "jest-cli": "^27.0.1",
-    "watchd": "github:mklabs/watchd"
+    "jest-cli": "^27.0.1"
   },
   "bake": {
     "description": "Scaffold a basic ES6 setup",
