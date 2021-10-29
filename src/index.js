@@ -22,7 +22,7 @@ const engine = (game, iter) => {
       engine(game, count);
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameIn.answer}'`);
-      console.log(`Let's try again ${name}!`);
+      console.log(`Let's try again, ${name}!`);
       count = 0;
     }
   } else {
