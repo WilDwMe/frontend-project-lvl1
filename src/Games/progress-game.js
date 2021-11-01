@@ -29,7 +29,7 @@ const progression = () => {
   const rules = 'What number is missing in the progression?';
   const exp = arr.join(' ');
   const rigthAnswer = String(check(checking, arr));
-  console.log(rigthAnswer);
+  // console.log(rigthAnswer);
   return {
     expression: exp,
     answer: rigthAnswer,
