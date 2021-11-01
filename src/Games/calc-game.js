@@ -8,7 +8,6 @@ const calc = () => {
   const exp = `${a}${randomOp}${b}`;
   // eslint-disable-next-line no-eval
   const rigthAnswer = String(eval(exp));
-  console.log(rigthAnswer);
   const rules = 'What is the result of the expression?';
   return {
     expression: exp,
